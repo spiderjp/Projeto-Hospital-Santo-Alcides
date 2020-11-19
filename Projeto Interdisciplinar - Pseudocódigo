@@ -1,0 +1,170 @@
+literal entrarP(email, password){ 
+Inicio
+	Escreva (“Digite seu Email: ”)
+	Leia(email)
+	Escreva (“Digite sua Senha”)
+	Leia(password)
+fim
+}
+
+literal registrarC(){
+	Literal bcg, vop, tretavalente, tripliceV, hB, dupla
+Inicio
+Escreva (“É vacinado contra BCG?”)
+se(bcg == “Sim”){
+	escreva(“Sim.”)
+senão{
+	escreva(“Não”)
+}
+escreva(“É vacinado contra VOP?”)
+se(vop == “Sim”){
+	escreva(“Sim”)
+}
+senão{
+	escreva(“Não”)
+}
+escreva(“É vacinado contra Tretavalente?”)
+se(tretavalente == “Sim”){
+	escreva(“Sim”)
+senão{
+	escreva(“Não”)
+} 
+Escreva (“É vacinado contra Tripice Viral?”)
+Se(tríplice == “Sim”){
+	Escreva(“Sim”)
+}
+Senão{
+	Escreva(“Não”)  
+}
+Escreva (“É vacinado contra Hepatite B?”)
+Se(hB == “Sim”){
+	Escreva(“Sim”)
+}
+Senão{
+	Escreva(“Não”)
+}
+Escreva (“É vacinado contra Dupla?”)
+se(dupla == “Sim”){
+	escreva(“Sim”)
+}
+Senão{ 
+	Escreva(“Não”)
+}
+Fim
+}
+
+Função marcarConsulta(){
+	Literal nomeM
+	Inteiro data
+Inicio
+	Escreva(“Digite a data da consulta: ”)
+	Leia(data)
+	Escreva(“Escolha o seu médico”)
+	Leia(nomeM)
+Fim
+}
+
+literal entrarM(crmM, password){ 
+Inicio
+	Escreva(“Digite o seu CRM: ”)
+Se (crm = crmM){
+	Leia(crm, senha)
+Senão{
+	Escreva(“Crm invalido”)
+}
+Escreva(“Digite a sua senha”)
+Se(senha = password){
+	Leia(senha, crm)
+}
+Senão{ 
+	Escreva (“Senha invalida”)
+}
+Fim
+}
+
+literal receitar(nome){
+	Literal receitarV
+	Inteiro codA
+Inicio
+	Escreva(“Digite o nome do paciente: ”)
+	Leia(nome)
+	Escreva(“Receitar vacina(s): ”)
+	Leia(receitarV)
+	Escreva(“Digite o código de autorização”)
+Se(codA == codA){
+	leia(codA)
+}
+Senão{
+	Escreva(“código invalido”)
+}
+Fim
+}
+
+literal cadastrarE(){
+	literal nome, usuario, senha
+	inteiro coren, telefone
+inicio
+	escreva("Digite o seu Nome: ")
+	leia(nome)
+	escreva("Digite o seu Nome de Usuário: ")
+	leia(usuario)
+	escreva("Digite o seu Telefone: ")
+	leia(telefone)
+	escreva("Digite a sua Senha: ")
+	leia(senha)
+fim
+}
+
+literal cadastrarM(){
+	literal nome, nomeU, areaA, email, senha
+	inteiro crm
+inicio
+	escreva("Digite o seu Nome: ")
+	leia(nome)
+	escreva("Digite o seu Nome de Usuário: ")
+	leia(nomeU)
+	escreva("Digite o sua Área Atuante: ")
+	leia(areaA)
+	escreva("Digite o seu CRM: ")
+	leia(crm)
+	escreva("Digite o seu E-mail: ")
+	leia(email)
+	escreva("Digite a sua Senha: ")
+	leia(senha)
+fim
+}
+
+literal cadastrarP(){
+	literal nome, email, senha, endereco
+	inteiro idade, telefone
+	real cpf
+inicio
+	escreva("Digite o seu Nome: ")
+	leia(nome)
+	escreva("Digite a sua Idade: ")
+	leia(idade)
+	escreva("Digite o seu CPF: ")
+	leia(cpf)
+	escreva("Digite o seu E-mail: ")
+	leia(email)
+	escreva("Digite o sua Senha: ")
+	leia(senha)
+	escreva("Digite o seu Telefone: ")
+	leia(telefone)
+	escreva("Digite o seu Endereço: ")
+	leia(endereco)
+fim
+}
+
+algoritmo ProjetoI
+	literal email, senha
+inicio
+	cadastraP()
+	cadastraM()
+	cadastraE()
+	entraP(email, senha)
+	registrarC()
+	marcaC()
+	entrarM()
+	receitar()
+fim
